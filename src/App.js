@@ -5,18 +5,19 @@ import profileImage from "./Images/Dnyanesh.jpeg";
 
 function App() {
   return (
-    <Container maxWidth="md">
+    <Container maxWidth="lg">
       {/* Header Section */}
       <Box sx={{
-        display: "flex", alignItems: "center", justifyContent: "center", 
+        display: "flex", flexDirection: { xs: "column", md: "row" },
+        alignItems: "center", justifyContent: "center",
         background: "linear-gradient(135deg, #1e3c72 30%, #2a5298 90%)", color: "white",
-        p: 5, borderRadius: 3, boxShadow: 3
+        p: 4, borderRadius: 3, boxShadow: 3
       }}>
-        <Box sx={{ textAlign: "center", flex: 1 }}>
+        <Box sx={{ textAlign: { xs: "center", md: "left" }, flex: 1 }}>
           <Typography variant="h3" gutterBottom sx={{ fontWeight: "bold" }}>Dnyanesh Patil</Typography>
           <Typography variant="h6" sx={{ fontStyle: "italic" }}>Java Developer | Spring Boot | React.js | PostgreSQL</Typography>
         </Box>
-        <Box sx={{ borderRadius: "50%", overflow: "hidden", width: "150px", height: "150px", boxShadow: 3, ml: 4 }}>
+        <Box sx={{ borderRadius: "50%", overflow: "hidden", width: { xs: "120px", md: "150px" }, height: { xs: "120px", md: "150px" }, boxShadow: 3, mt: { xs: 3, md: 0 } }}>
           <img src={profileImage} alt="Dnyanesh Patil" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         </Box>
       </Box>
@@ -36,7 +37,7 @@ function App() {
         <Typography variant="h4" sx={{ mb: 2 }}>Skills</Typography>
         <Grid container spacing={2}>
           {["Java 8", "Spring Boot", "React.js", "Microservices", "PostgreSQL", "MySQL", "Git", "JIRA", "REST APIs"].map((skill, index) => (
-            <Grid item xs={6} sm={4} key={index}>
+            <Grid item xs={6} sm={4} md={3} key={index}>
               <motion.div whileHover={{ scale: 1.1 }}>
                 <Card sx={{ p: 2, textAlign: "center", boxShadow: 3, borderRadius: 2 }}>{skill}</Card>
               </motion.div>
@@ -62,18 +63,22 @@ function App() {
       {/* Projects Section */}
       <Box sx={{ p: 3 }}>
         <Typography variant="h4" sx={{ mb: 2 }}>Projects</Typography>
-        {[ { name: "AH Workwave", description: "Workforce Management System" },
-          { name: "E-Healthcare Management App", description: "Healthcare System" },
-          { name: "Vehicle Loan Orientation", description: "Banking Domain" }].map((project, index) => (
-          <motion.div key={index} whileHover={{ scale: 1.05 }}>
-            <Card sx={{ mt: 2, boxShadow: 3, borderRadius: 2 }}>
-              <CardContent>
-                <Typography variant="h6" sx={{ fontWeight: "bold" }}>{project.name}</Typography>
-                <Typography variant="body2" sx={{ mt: 1 }}>{project.description}</Typography>
-              </CardContent>
-            </Card>
-          </motion.div>
-        ))}
+        <Grid container spacing={2}>
+          {[{ name: "AH Workwave", description: "Workforce Management System" },
+            { name: "E-Healthcare Management App", description: "Healthcare System" },
+            { name: "Vehicle Loan Orientation", description: "Banking Domain" }].map((project, index) => (
+            <Grid item xs={12} sm={6} md={4} key={index}>
+              <motion.div whileHover={{ scale: 1.05 }}>
+                <Card sx={{ mt: 2, boxShadow: 3, borderRadius: 2 }}>
+                  <CardContent>
+                    <Typography variant="h6" sx={{ fontWeight: "bold" }}>{project.name}</Typography>
+                    <Typography variant="body2" sx={{ mt: 1 }}>{project.description}</Typography>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </Grid>
+          ))}
+        </Grid>
       </Box>
 
       {/* Education Section */}
@@ -91,7 +96,10 @@ function App() {
       </Box>
 
       {/* Contact Section */}
-      <Box sx={{ textAlign: "center", mt: 4, p: 3, background: "#1e3c72", color: "white", borderRadius: 3 }}>
+      <Box sx={{
+        textAlign: "center", mt: 4, p: 3, background: "#1e3c72",
+        color: "white", borderRadius: 3
+      }}>
         <Typography variant="h4" sx={{ mb: 2 }}>Contact</Typography>
         <Typography sx={{ mb: 1 }}>Email: dnyaneshpatil556@gmail.com</Typography>
         <Typography sx={{ mb: 2 }}>Phone: 9823566785</Typography>
