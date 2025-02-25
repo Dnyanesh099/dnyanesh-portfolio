@@ -7,12 +7,12 @@ function App() {
   DeviceMotionEvent(){
     console.log("ABCD");
     console.log.apply("Dnyanesh");
-    kjaslkjwldjksdxlslkslcksclncn
+    kjaslkjwldjksdxlslkslcksclncn;
   }
-
   Demo()
   {
-    console.log("Kashi ahes Pervain")
+    console.log("Kashi ahes Pervain");
+    console.log("hi");
   }
   return (
     <Container maxWidth="lg">
