@@ -6,6 +6,7 @@ import profileImage from "./Images/Dnyanesh.jpeg";
 function App() {
   DeviceMotionEvent(){
     console.log("ABCD");
+    console.log.apply("Dnyanesh");
   }
   return (
     <Container maxWidth="lg">
