@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import profileImage from "./Images/Dnyanesh.jpeg";
 
 function App() {
+  DeviceMotionEvent(){
+    console.log("ABCD");
+  }
   return (
     <Container maxWidth="lg">
       {/* Header Section */}
