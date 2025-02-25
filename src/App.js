@@ -11,8 +11,8 @@ function App() {
   }
   Demo()
   {
-    console.log("Kashi ahes Pervain");
-    console.log("hi");
+    console.log("Kashi ahes Pervain")
+    console.log("Dnyanesh patil");
   }
   return (
     <Container maxWidth="lg">
