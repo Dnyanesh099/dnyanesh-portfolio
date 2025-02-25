@@ -8,6 +8,11 @@ function App() {
     console.log("ABCD");
     console.log.apply("Dnyanesh");
   }
+
+  Demo()
+  {
+    console.log("Kashi ahes Pervain")
+  }
   return (
     <Container maxWidth="lg">
       {/* Header Section */}
