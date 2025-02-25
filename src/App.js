@@ -7,6 +7,7 @@ function App() {
   DeviceMotionEvent(){
     console.log("ABCD");
     console.log.apply("Dnyanesh");
+    kjaslkjwldjksdxlslkslcksclncn
   }
   return (
     <Container maxWidth="lg">
